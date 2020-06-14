@@ -82,9 +82,16 @@ li a:hover:not(.logi){
   <header>
     <br>
     <ul>
-      <li><a class="active" href="#">Home</a></li>
-      <br>
-      <br>
+      <li>
+        <button class="active" onclick="goBack()">Home</a>
+      </li>
+    </ul>
+    <br>
+    <script>
+      function goBack(){
+        window.history.back();
+      }
+    </script>
   </header>
 <hr>
 
