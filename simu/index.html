@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title id="Traffic">Traffic light simulation</title>
 <style>
 * {
   box-sizing: border-box;
@@ -11,13 +12,44 @@ body {
   margin: 0;
   font-family: Arial;
   font-size: 17px;
+
 }
 
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+li a:hover:not(.logi){
+  background-color: gold;
+}
+
+.active {
+  background-color: blue;
+}
+
+}
 #myVideo {
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%; 
+  min-width: 150%;
   min-height: 100%;
 }
 
@@ -47,12 +79,21 @@ body {
 </style>
 </head>
 <body>
+  <header>
+    <br>
+    <ul>
+      <li><a class="active" href="#">Home</a></li>
+      <br>
+      <br>
+  </header>
+<hr>
 
 <video autoplay muted loop id="myVideo">
-  <source src="rain.mp4" type="video/mp4">
+  <source src="Produce_1.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
-
+<br>
+<br>
 <div class="content">
   <h1>Heading</h1>
   <p>Simple traffic simulation from SUMO</p>
